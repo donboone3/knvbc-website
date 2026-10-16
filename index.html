@@ -856,7 +856,25 @@
 				align-items: center;
 			}
 			#masthead-responsive .site-header-responsive-inner { width: 100%; gap: 12px; }
-			#masthead-responsive .responsive-logo-img { height: 42px !important; }
+			#masthead-responsive .knvbc-text-brand {
+				display: inline-flex;
+				align-items: center;
+				text-decoration: none !important;
+				line-height: 1;
+			}
+			#masthead-responsive .knvbc-brand-title {
+				font-family: 'Antonio', sans-serif;
+				font-size: 30px;
+				font-weight: 700;
+				letter-spacing: 0.08em;
+				color: #ffffff !important;
+				text-transform: uppercase;
+				line-height: 1;
+				transition: color 160ms ease;
+			}
+			#masthead-responsive .knvbc-brand-title:hover {
+				color: var(--knvbc-gold) !important;
+			}
 			#masthead-responsive .topBarInLogoArea { gap: 10px; }
 			#masthead-responsive .knvbc-header-contact.knvbc-phone-btn,
 			body.bt-sticky-header-active #masthead-responsive .knvbc-header-contact.knvbc-phone-btn {
@@ -872,6 +890,48 @@
 			#knvbc-mobile-menu-btn { min-height: 44px; min-width: 64px; }
 			#knvbc-mobile-drawer { top: var(--knvbc-header-h-mobile) !important; max-height: calc(100vh - var(--knvbc-header-h-mobile)); overflow-y: auto; }
 			#knvbc-mobile-drawer ul a { padding: 10px 0 !important; min-height: 44px; box-sizing: border-box; }
+		}
+
+		/* Mobile Hero: Clean text-only header without background photo */
+		@media (max-width: 991px) {
+			#top .bt_bb_background_image_holder_wrapper {
+				display: none !important;
+			}
+			#top.bt_bb_section {
+				background: radial-gradient(circle at 50% 15%, #1d212b 0%, #111318 65%, #0a0c0f 100%) !important;
+				padding-top: calc(var(--knvbc-header-h-mobile) + 32px) !important;
+				padding-bottom: 40px !important;
+				min-height: auto !important;
+				height: auto !important;
+			}
+			#top.bt_bb_section.bt_bb_background_overlay_dark_bottom_gray_gradient::before {
+				display: none !important;
+			}
+			#top .bt_bb_card_icon {
+				background: rgba(255, 255, 255, 0.05) !important;
+				border: 1px solid rgba(255, 255, 255, 0.12) !important;
+				backdrop-filter: blur(8px);
+			}
+			#top .bt_bb_card_icon:hover {
+				background: rgba(255, 255, 255, 0.09) !important;
+				border-color: var(--knvbc-gold) !important;
+			}
+			.knvbc-hero-lead {
+				color: #e2e4ea !important;
+			}
+		}
+		@media (max-width: 575px) {
+			#top .bt_bb_button {
+				display: block !important;
+				width: 100% !important;
+				margin-right: 0 !important;
+				margin-bottom: 12px !important;
+			}
+			#top .bt_bb_button .bt_bb_link {
+				display: block !important;
+				text-align: center !important;
+				width: 100% !important;
+			}
 		}
 		.knvbc-sr-only {
 			position: absolute !important;
@@ -1362,8 +1422,8 @@
 		<div class="site-header-responsive-inner">
 			<div class="site-header-responsive-logo-text">
 				<div class="site-header-responsive-logo">
-					<a href="#top" class="responsive-logo">
-						<img width="512" height="162" src="assets/logos/knvbc-logo-white-cropped.png" class="responsive-logo-img" alt="KNVBC" decoding="async" />
+					<a href="#top" class="responsive-logo knvbc-text-brand" title="Kansas Networks Volleyball Club">
+						<span class="knvbc-brand-title">KNVBC</span>
 					</a>
 				</div>
 			</div>

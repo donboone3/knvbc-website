@@ -3,3 +3,8 @@ campo_volleyball_ref.html
 campo_volleyball_shortcodes.txt
 .vercel
 *.log
+*.png
+!assets/logos/*.png
+!assets/campo/*.png
+!assets/photos/*.png
+scratch_*.py
